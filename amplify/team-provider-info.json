@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-alphastrikesolo-dev-200542-authRole",
+      "UnauthRoleArn": "arn:aws:iam::334119362424:role/amplify-alphastrikesolo-dev-200542-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::334119362424:role/amplify-alphastrikesolo-dev-200542-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-alphastrikesolo-dev-200542-deployment",
+      "UnauthRoleName": "amplify-alphastrikesolo-dev-200542-unauthRole",
+      "StackName": "amplify-alphastrikesolo-dev-200542",
+      "StackId": "arn:aws:cloudformation:us-east-1:334119362424:stack/amplify-alphastrikesolo-dev-200542/51edffd0-7415-11ec-9d7c-0a2152712575",
+      "AmplifyAppId": "d1hu8yig5saww6"
+    },
+    "categories": {
+      "auth": {
+        "alphastrikesolo5917c726": {}
+      }
+    }
+  }
+}
