@@ -1,4 +1,4 @@
-export enum UnitRoleEnum {
+export enum UnitRoles {
     Ambusher = 'Ambusher',
     Attack = 'Attack',
     Brawler = 'Brawler',
@@ -14,4 +14,9 @@ export enum UnitRoleEnum {
     Sniper = 'Sniper',
     Striker = 'Striker',
     Transport = 'Transport'
+}
+
+export interface UnitRole {
+    id: number,
+    unitRole: UnitRoles
 }
