@@ -1,13 +1,13 @@
 import React from "react";
+import { UnitForm } from "../components/UnitForm";
 
-interface unitProps = {
-    
+interface addUnitProps = {
 }
 
 const AddUnits = () => {
     return (
         <div>
-            <unitForm/>
+            <UnitForm />
             <button>Add Unit</button>
         </div>
     )

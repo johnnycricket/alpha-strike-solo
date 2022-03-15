@@ -5,7 +5,7 @@ export enum UnitTypes {
     CI = 'CI', //convential infantry
     IM = 'IM', //industrialmech
     PM = 'PM', //protomech
-    CV = 'SV', //Support Vehicle
+    SV = 'SV', //Support Vehicle
     UK = 'UK', //Unknown
     NO = 'NO' //None
 }
