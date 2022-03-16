@@ -40,12 +40,12 @@
                 "AttributeDefinitions": [
                   
                   {
-                      "AttributeName": "forceId",
+                      "AttributeName": "userId",
                       "AttributeType": "N"
                   }  , 
                   
                   {
-                      "AttributeName": "typeAndId",
+                      "AttributeName": "types",
                       "AttributeType": "S"
                   } 
                   
@@ -53,12 +53,12 @@
                 "KeySchema": [
                   
                   {
-                    "AttributeName": "forceId",
+                    "AttributeName": "userId",
                     "KeyType": "HASH"
                   }  , 
                   
                   {
-                    "AttributeName": "typeAndId",
+                    "AttributeName": "types",
                     "KeyType": "RANGE"
                   } 
                   

@@ -1,7 +1,0 @@
-{
-    "tableName": "asforcetable",
-    "partitionKeyName": "forceId",
-    "partitionKeyType": "N",
-    "sortKeyName": "typeAndId",
-    "sortKeyType": "S"
-}

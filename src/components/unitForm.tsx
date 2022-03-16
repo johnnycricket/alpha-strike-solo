@@ -4,7 +4,7 @@ import { UnitRoles } from "../types/UnitRole";
 import { UnitSizes } from "../types/UnitSize";
 import { UnitTypes } from "../types/UnitType";
 
-export function UnitForm(prop: Unit){
+const UnitForm = (props: {unit: Unit}) => {
     const typeOptions = Object.values(UnitTypes);
     const roleOptions = Object.values(UnitRoles);
     const sizeOptions = Object.values(UnitSizes);
@@ -36,3 +36,5 @@ export function UnitForm(prop: Unit){
         </div>
     )
 }
+
+export default UnitForm;

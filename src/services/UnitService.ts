@@ -12,10 +12,10 @@ export class UnitService {
     }
 
     editUnit(userId: string, unit: Unit) {
-
+        return this._units;
     }
 
     createUnit(userId: string, unit: Unit) {
-
+        return this._units;
     }
 } 

@@ -1,0 +1,7 @@
+{
+    "tableName": "astable",
+    "partitionKeyName": "userId",
+    "partitionKeyType": "N",
+    "sortKeyName": "types",
+    "sortKeyType": "S"
+}

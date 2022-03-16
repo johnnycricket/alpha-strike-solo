@@ -31,7 +31,7 @@
     }
   },
   "storage": {
-    "asforcetable": {
+    "astable": {
       "service": "DynamoDB",
       "providerPlugin": "awscloudformation"
     }
