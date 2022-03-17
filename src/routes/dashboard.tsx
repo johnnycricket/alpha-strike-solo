@@ -5,24 +5,20 @@ const Dashboard = () => {
     return (
         <div>
             <section>
-                <h1>Add Units</h1>
-                <Link to='/addunits'></Link>
+                <h1>Movement</h1>
+                <Link to='/movement'></Link>
             </section>
             <section>
-                <h1>Create Force</h1>
-                <Link to='/createforce'></Link>
+                <h1>Targeting</h1>
+                <Link to='/targeting'></Link>
             </section>
             <section>
-                <h1>List Units</h1>
-                <Link to='/listunits'></Link>
+                <h1>Firing</h1>
+                <Link to='/firing'></Link>
             </section>
             <section>
-                <h1>List Forces</h1>
-                <Link to='/listforces'></Link>
-            </section>
-            <section>
-                <h1>Run AI</h1>
-                <Link to='/play'></Link>
+                <h1>Deployment</h1>
+                <Link to='/deployment'></Link>
             </section>
         </div>
     )
