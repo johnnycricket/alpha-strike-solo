@@ -1,16 +1,4 @@
-import { TableInterface } from "./tableInterface";
-
-export enum MissileSniperMovementEnum {
-    'Get Closer to map edge',
-    'Perch in heavy cover along treeline',
-    'Head to high ground',
-    'Stand still',
-    'Close to medium distance',
-    'Jump/Sprint to heaviest cover'
-}
-
-//Prioritize LOS
-//Keep closest enemy in front arc
+import { TableInterface } from "./TableInterface";
 
 export const MissileSniperMovement: TableInterface[] = [
     {

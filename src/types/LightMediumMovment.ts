@@ -1,4 +1,4 @@
-import { TableInterface } from "./tableInterface";
+import { TableInterface } from "./TableInterface";
 
 export const LightMediumMovement: TableInterface[] = [
     {

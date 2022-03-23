@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SmallMediumMovement from "../components/movement/SmallMediumMovement";
 
 const Movement = () => {
     const [showMoveKinds, setShowMoveKinds] = useState(true);
