@@ -31,4 +31,20 @@ export default class OrderService {
         })    
         return picked;        
     }
+
+    static shiftOrder(currentIndex: number, table: TableInterface[]): Object {
+        let currOrder = table[currentIndex]
+        if(currOrder.shift === 'o'){
+            return currOrder;
+        }
+        if(currOrder.shift === '+'){
+            const toShift: number = currentIndex + 1;
+            return table[toShift];
+        }
+        if(currOrder.shift === '-'){
+            const toShift: number = currentIndex - 1;
+            return table[toShift]
+        }
+        return table[currentIndex];
+    }
 }
