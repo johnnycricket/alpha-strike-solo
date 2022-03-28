@@ -17,7 +17,7 @@ export default class OrderService {
         return returned;
     }
 
-    static pickOrder(result: number, orders: TableInterface[]): Object {
+    static pickOrder(result: number, orders: TableInterface[]): TableInterface {
         let picked = Object.assign({});
         let match: boolean;
 
@@ -32,18 +32,18 @@ export default class OrderService {
         return picked;        
     }
 
-    static shiftOrder(currentIndex: number, table: TableInterface[]): Object {
+    static shiftOrder(currentIndex: number, table: TableInterface[]): TableInterface {
         let currOrder = table[currentIndex]
         if(currOrder.shift === 'o'){
-            return currOrder;
+            return Object.assign({}, currOrder);
         }
         if(currOrder.shift === '+'){
             const toShift: number = currentIndex + 1;
-            return table[toShift];
+            return Object.assign({}, table[toShift]);
         }
         if(currOrder.shift === '-'){
             const toShift: number = currentIndex - 1;
-            return table[toShift]
+            return Object.assign({}, table[toShift]);
         }
         return table[currentIndex];
     }
