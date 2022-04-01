@@ -1,4 +1,7 @@
 import { useState } from "react";
+import HeavyAssaultMovement from "../components/movement/HeavyAssaultMovement";
+import MeleeMovement from "../components/movement/MeleeMovement";
+import MissileSniperMovement from "../components/movement/MissileSniperMovement";
 import SmallMediumMovement from "../components/movement/SmallMediumMovement";
 
 const Movement = () => {
@@ -84,7 +87,7 @@ const Movement = () => {
                 {showMelee && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <MeleeMovement></MeleeMovement>
+                        <MeleeMovement/>
                     </div>}
             </section>
         </div>

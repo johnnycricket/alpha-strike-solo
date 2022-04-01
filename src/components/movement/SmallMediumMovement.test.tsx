@@ -1,7 +1,5 @@
 import SmallMediumMovement from "./SmallMediumMovement";
-import { TableInterface } from "../../types/TableInterface";
-import { LightMediumMovement } from "../../types/LightMediumMovment";
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 
 describe('All of SmallMediumMovement', () => {
@@ -11,5 +9,15 @@ describe('All of SmallMediumMovement', () => {
             const rollButton = screen.getByRole('button');
             expect(rollButton).toHaveTextContent('Move');
         })
+    })
+
+    describe('Rolling', () => {
+        test('should roll and show an instruction', () => {
+            render(<SmallMediumMovement/>);
+            const rollButton = screen.getByRole('button');
+            fireEvent.click(rollButton);
+            const instruction = screen.getByTestId('instruction-p');
+            expect(instruction.innerHTML).not.toBeNull();
+        });
     })
 });

@@ -30,10 +30,10 @@ const SmallMediumMovement = () => {
                 {currOrder.instruction.length > 0 && 
                     <div>
                         <h3>Instruction</h3>
-                        <p>{currOrder.instruction}</p>
+                        <p data-testid="instruction-p">{currOrder.instruction}</p>
                     </div>}
                 {currOrder.index > 0 && currOrder.shift !== 'o' &&
-                    <button onClick={() => shiftOrder()}>This order doesn't work. Try another.</button>}
+                    <button data-testid="shift-button" onClick={() => shiftOrder()}>This order doesn't work. Try another.</button>}
             </section>
         </div>
     )
