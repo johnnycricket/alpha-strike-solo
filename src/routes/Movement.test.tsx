@@ -37,5 +37,71 @@ describe("all of movement", () => {
                 expect(otherButton).toBeTruthy();
             })
         })
+        describe('HVAS', () => {
+            let hvBtn: any;
+            beforeEach(() => {
+                // eslint-disable-next-line testing-library/no-render-in-setup
+                render(<Movement/>);
+                hvBtn = screen.getByText('Heavy - Assault Unit');
+            })
+            test('should show heavy and assault when heavy and asssult unit button', () => {
+                fireEvent.click(hvBtn);
+                const close = screen.getByText('X');
+                const smallMediumComponent = screen.getByText('heavy assault movement');
+                expect(close).toBeTruthy();
+                expect(smallMediumComponent).toBeTruthy();
+            });
+            test('clicking X should show default questions again', () => {
+                fireEvent.click(hvBtn);
+                let close = screen.getByText('X');
+                fireEvent.click(close);
+                const otherButton = screen.getByText('Melee Unit');
+                expect(otherButton).toBeTruthy();
+            })
+        })
+        describe('Missile Boat - Sniper Unit', () => {
+            let msSn: any;
+            beforeEach(() => {
+                // eslint-disable-next-line testing-library/no-render-in-setup
+                render(<Movement/>);
+                msSn = screen.getByText('Missile Boat - Sniper Unit');
+            })
+            test('should show missile sniper when that unit button pressed', () => {
+                fireEvent.click(msSn);
+                const close = screen.getByText('X');
+                const missileSniperComponent = screen.getByText('missile sniper movement');
+                expect(close).toBeTruthy();
+                expect(missileSniperComponent).toBeTruthy();
+            });
+            test('clicking X should show default questions again', () => {
+                fireEvent.click(msSn);
+                let close = screen.getByText('X');
+                fireEvent.click(close);
+                const otherButton = screen.getByText('Melee Unit');
+                expect(otherButton).toBeTruthy();
+            })
+        })
+        describe('Melee unit', () => {
+            let melee: any;
+            beforeEach(() => {
+                // eslint-disable-next-line testing-library/no-render-in-setup
+                render(<Movement/>);
+                melee = screen.getByText('Melee Unit');
+            })
+            test('should show melee unit button when pressed', () => {
+                fireEvent.click(melee);
+                const close = screen.getByText('X');
+                const meleeComponent = screen.getByText('melee movement');
+                expect(close).toBeTruthy();
+                expect(meleeComponent).toBeTruthy();
+            });
+            test('clicking X should show default questions again', () => {
+                fireEvent.click(melee);
+                let close = screen.getByText('X');
+                fireEvent.click(close);
+                const otherButton = screen.getByText('Melee Unit');
+                expect(otherButton).toBeTruthy();
+            })
+        })
     });
 });
