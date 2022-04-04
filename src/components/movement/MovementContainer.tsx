@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { roll } from "../../services/DtwelveService";
 import OrderService from "../../services/OrderService";
-import { LightMediumMovement } from "../../types/LightMediumMovment";
 import { TableInterface } from "../../types/TableInterface";
 
-const SmallMediumMovement = () => {
-    const [tableObj, setTableObj] = useState({});
-    const [result, setResult] = useState(0);
+interface CT {
+    moveType: TableInterface[];
+}
+
+const MovementComponent = (props: CT) => {
+    const [currResult, setResult] = useState(0);
     const [currOrder, setOrder] = useState<TableInterface>({
         instruction: '',
         index: 0
@@ -15,12 +17,12 @@ const SmallMediumMovement = () => {
     const rollInstruction = () => {
         const result:number = roll();
         setResult(result);
-        setOrder(OrderService.pickOrder(result, LightMediumMovement));
+        setOrder(OrderService.pickOrder(currResult, props.moveType));
     }
 
     const shiftOrder = () => {
         const currIndex = currOrder.index;
-        setOrder(OrderService.shiftOrder(currIndex, LightMediumMovement))
+        setOrder(OrderService.shiftOrder(currIndex, props.moveType))
     }
 
     return (
@@ -39,4 +41,4 @@ const SmallMediumMovement = () => {
     )
 }
 
-export default SmallMediumMovement;
+export default MovementComponent;

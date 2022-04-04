@@ -1,11 +1,12 @@
-import SmallMediumMovement from "./SmallMediumMovement";
+import MovementContainer from "./MovementContainer";
+import { LightMediumMovement } from "../../types/LightMediumMovment";
 import { fireEvent, render, screen } from '@testing-library/react';
 
 
-describe('All of SmallMediumMovement', () => {
+describe('All of MovementContainer', () => {
     describe('Component loading.', () => {
         test('component loads', () => {
-            render(<SmallMediumMovement/>);
+            render(<MovementContainer moveType={LightMediumMovement}/>);
             const rollButton = screen.getByRole('button');
             expect(rollButton).toHaveTextContent('Move');
         })
@@ -13,7 +14,7 @@ describe('All of SmallMediumMovement', () => {
 
     describe('Rolling', () => {
         test('should roll and show an instruction', () => {
-            render(<SmallMediumMovement/>);
+            render(<MovementContainer moveType={LightMediumMovement}/>);
             const rollButton = screen.getByRole('button');
             fireEvent.click(rollButton);
             const instruction = screen.getByTestId('instruction-p');

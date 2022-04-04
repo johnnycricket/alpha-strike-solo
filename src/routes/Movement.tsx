@@ -1,8 +1,9 @@
 import { useState } from "react";
-import HeavyAssaultMovement from "../components/movement/HeavyAssaultMovement";
-import MeleeMovement from "../components/movement/MeleeMovement";
-import MissileSniperMovement from "../components/movement/MissileSniperMovement";
-import SmallMediumMovement from "../components/movement/SmallMediumMovement";
+import { LightMediumMovement } from "../types/LightMediumMovment";
+import { HeavyAssaultMovement as HeavyAssaultMovementType } from "../types/HeavyAssaultMovement";
+import { MissileSniperMovement as MissileSniperMovementType } from "../types/MissileSniperMovement";
+import { MeleeMovement as MeleeMovementType } from "../types/MeleeMovement";
+import MovementContainer from "../components/movement/MovementContainer";
 
 const Movement = () => {
     const [showMoveKinds, setShowMoveKinds] = useState(true);
@@ -69,25 +70,25 @@ const Movement = () => {
                 {showSM && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <SmallMediumMovement/>
+                        <MovementContainer moveType={LightMediumMovement}/>
                     </div>
                 }
                 {showHA && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <HeavyAssaultMovement/>
+                        <MovementContainer moveType={HeavyAssaultMovementType}/>
                     </div>
                 }
                 {showMS && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <MissileSniperMovement/>
+                        <MovementContainer moveType={MissileSniperMovementType}/>
                     </div>
                 }
                 {showMelee && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <MeleeMovement/>
+                        <MovementContainer moveType={MeleeMovementType}/>
                     </div>}
             </section>
         </div>
