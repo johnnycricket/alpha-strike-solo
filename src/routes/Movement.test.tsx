@@ -25,7 +25,7 @@ describe("all of movement", () => {
             test('should show small medium when small medium button', () => {
                 fireEvent.click(smMdBtn);
                 const close = screen.getByText('X');
-                const smallMediumComponent = screen.getByText('Move');
+                const smallMediumComponent = screen.getByText('Small & Medium Unit Movement');
                 expect(close).toBeTruthy();
                 expect(smallMediumComponent).toBeTruthy();
             });
@@ -47,7 +47,7 @@ describe("all of movement", () => {
             test('should show heavy and assault when heavy and asssult unit button', () => {
                 fireEvent.click(hvBtn);
                 const close = screen.getByText('X');
-                const smallMediumComponent = screen.getByText('heavy assault movement');
+                const smallMediumComponent = screen.getByText('Heavy & Assault Unit Movement');
                 expect(close).toBeTruthy();
                 expect(smallMediumComponent).toBeTruthy();
             });
@@ -69,7 +69,7 @@ describe("all of movement", () => {
             test('should show missile sniper when that unit button pressed', () => {
                 fireEvent.click(msSn);
                 const close = screen.getByText('X');
-                const missileSniperComponent = screen.getByText('missile sniper movement');
+                const missileSniperComponent = screen.getByText('Missile & Sniper Unit Movement');
                 expect(close).toBeTruthy();
                 expect(missileSniperComponent).toBeTruthy();
             });
@@ -91,7 +91,7 @@ describe("all of movement", () => {
             test('should show melee unit button when pressed', () => {
                 fireEvent.click(melee);
                 const close = screen.getByText('X');
-                const meleeComponent = screen.getByText('melee movement');
+                const meleeComponent = screen.getByText('Melee Unit Movement');
                 expect(close).toBeTruthy();
                 expect(meleeComponent).toBeTruthy();
             });

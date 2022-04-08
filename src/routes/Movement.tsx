@@ -70,25 +70,25 @@ const Movement = () => {
                 {showSM && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <MovementContainer moveType={LightMediumMovement}/>
+                        <MovementContainer moveType={LightMediumMovement} moveTitle={"Small & Medium Unit Movement"}/>
                     </div>
                 }
                 {showHA && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <MovementContainer moveType={HeavyAssaultMovementType}/>
+                        <MovementContainer moveType={HeavyAssaultMovementType} moveTitle={"Heavy & Assault Unit Movement"}/>
                     </div>
                 }
                 {showMS && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <MovementContainer moveType={MissileSniperMovementType}/>
+                        <MovementContainer moveType={MissileSniperMovementType} moveTitle={"Missile & Sniper Unit Movement"}/>
                     </div>
                 }
                 {showMelee && 
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
-                        <MovementContainer moveType={MeleeMovementType}/>
+                        <MovementContainer moveType={MeleeMovementType} moveTitle={'Melee Unit Movement'}/>
                     </div>}
             </section>
         </div>

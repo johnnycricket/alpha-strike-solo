@@ -5,6 +5,7 @@ import { TableInterface } from "../../types/TableInterface";
 
 interface CT {
     moveType: TableInterface[];
+    moveTitle: String;
 }
 
 const MovementComponent = (props: CT) => {
@@ -27,6 +28,7 @@ const MovementComponent = (props: CT) => {
 
     return (
         <div>
+            <h2>{props.moveTitle}</h2>
             <button onClick={() => rollInstruction()}>Move</button>
             <section>
                 {currOrder.instruction.length > 0 && 
