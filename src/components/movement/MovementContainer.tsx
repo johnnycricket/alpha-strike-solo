@@ -9,7 +9,6 @@ interface CT {
 }
 
 const MovementComponent = (props: CT) => {
-    const [currResult, setResult] = useState(0);
     const [currOrder, setOrder] = useState<TableInterface>({
         instruction: '',
         index: 0
@@ -17,8 +16,7 @@ const MovementComponent = (props: CT) => {
 
     const rollInstruction = () => {
         const result:number = roll();
-        setResult(result);
-        setOrder(OrderService.pickOrder(currResult, props.moveType));
+        setOrder(OrderService.pickOrder(result, props.moveType));
     }
 
     const shiftOrder = () => {
@@ -31,7 +29,7 @@ const MovementComponent = (props: CT) => {
             <h2>{props.moveTitle}</h2>
             <button onClick={() => rollInstruction()}>Move</button>
             <section>
-                {currOrder.instruction.length > 0 && 
+                {currOrder.instruction && 
                     <div>
                         <h3>Instruction</h3>
                         <p data-testid="instruction-p">{currOrder.instruction}</p>
