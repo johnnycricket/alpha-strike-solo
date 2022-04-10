@@ -5,20 +5,24 @@ const Dashboard = () => {
     return (
         <div>
             <section>
-                <h1>Movement</h1>
-                <Link to='/movement'></Link>
+                <Link to='/movement'>
+                    <h1>Movement</h1>
+                </Link>
             </section>
             <section>
-                <h1>Targeting</h1>
-                <Link to='/targeting'></Link>
+                <Link to='/targeting'>
+                    <h1>Targeting</h1>
+                </Link>
             </section>
             <section>
-                <h1>Firing</h1>
-                <Link to='/firing'></Link>
+                <Link to='/firing'>
+                    <h1>Firing</h1>
+                </Link>
             </section>
             <section>
-                <h1>Deployment</h1>
-                <Link to='/deployment'></Link>
+                <Link to='/deployment'>
+                    <h1>Deployment</h1>
+                </Link>
             </section>
         </div>
     )
