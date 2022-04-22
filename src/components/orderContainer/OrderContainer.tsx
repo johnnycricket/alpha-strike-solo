@@ -4,8 +4,8 @@ import OrderService from "../../services/OrderService";
 import { TableInterface } from "../../types/TableInterface";
 
 interface CT {
-    moveType: TableInterface[];
-    moveTitle: String;
+    orderType: TableInterface[];
+    orderTitle: String;
 }
 
 const OrderContainer = (props: CT) => {
@@ -16,17 +16,17 @@ const OrderContainer = (props: CT) => {
 
     const rollInstruction = () => {
         const result:number = roll();
-        setOrder(OrderService.pickOrder(result, props.moveType));
+        setOrder(OrderService.pickOrder(result, props.orderType));
     }
 
     const shiftOrder = () => {
         const currIndex = currOrder.index;
-        setOrder(OrderService.shiftOrder(currIndex, props.moveType))
+        setOrder(OrderService.shiftOrder(currIndex, props.orderType))
     }
 
     return (
         <div>
-            <h2>{props.moveTitle}</h2>
+            <h2>{props.orderTitle}</h2>
             <button onClick={() => rollInstruction()}>Move</button>
             <section>
                 {currOrder.instruction && 

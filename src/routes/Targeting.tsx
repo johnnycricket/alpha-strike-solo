@@ -1,12 +1,18 @@
-import { useState } from 'react';
-
+import OrderContainer from '../components/orderContainer/OrderContainer';
+import { TargetingRules } from '../types/TargetingRules';
 
 const Targeting = () => {
-    const [showTargetKinds, setShowTargetKinds] = useState(true);
     
     return (
         <div>
-            <p>targeting</p>
+            <section>
+                <h1>Targeting</h1>
+            </section>
+            <section>
+                <div>
+                    <OrderContainer orderType={TargetingRules} orderTitle={'Unit Targeting'} />
+                </div>
+            </section>
         </div>
     )
 }

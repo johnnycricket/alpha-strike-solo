@@ -7,7 +7,7 @@ export const MissileSniperMovement: TableInterface[] = [
     },
     {
         index: 1,
-        instruction: 'Keep closest enemy in front arc'
+        instruction: 'Keep closest enemy in front arc.'
     },
     {
         index: 2,
