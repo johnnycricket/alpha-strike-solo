@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { roll } from "../../services/DtwelveService";
+import { DTwelve } from "../../services/DiceService";
 import OrderService from "../../services/OrderService";
 import { TableInterface } from "../../types/TableInterface";
 
@@ -15,7 +15,7 @@ const OrderContainer = (props: CT) => {
     });
 
     const rollInstruction = () => {
-        const result:number = roll();
+        const result:number = DTwelve();
         setOrder(OrderService.pickOrder(result, props.orderType));
     }
 
