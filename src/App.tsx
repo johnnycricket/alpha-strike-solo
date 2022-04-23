@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Dashboard from './routes/Dashboard';
-import Deployment from './routes/Deployment';
+import Attack from './routes/Attack';
 import Firing from './routes/Firing';
 import Movement from './routes/Movement';
 import Targeting from './routes/Targeting';
@@ -17,10 +17,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
+          <Route path="/attack" element={<Attack/>}/>
           <Route path="/movement" element={<Movement/>}/>
           <Route path="/targeting" element={<Targeting/>}/>
           <Route path="/firing" element={<Firing/>}/>
-          <Route path="/deployment" element={<Deployment/>}/>
         </Routes>
       </Router>
     </div>
