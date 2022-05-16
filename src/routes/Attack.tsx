@@ -1,9 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import DTwelveContainer from "../components/diceContainer/DTwelveContainer";
 
 const Attack = () => {
     const [showDiceTypes, setShowDiceTypes] = useState(true);
     const [showDTwelve, setShowDTwelve] = useState(false);
     const [showTwoDSix, setShowTwoDSix] = useState(false);
+    const [damageType, setDamageType] = useState('variable');
 
     const updateStage = (type?: String): void => {
         switch (type) {
@@ -23,6 +25,10 @@ const Attack = () => {
                 setShowTwoDSix(false);
         }
     }
+
+    const handleDamageType = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setDamageType(event.target.value);
+    }
     
     return (
         <div>
@@ -40,9 +46,11 @@ const Attack = () => {
                             <button onClick={() => updateStage('d6')}>2 D6</button>
                         </div>
                         <div>
-                            <form action="">
-                                <input type="radio" name="variable" id="variable-dice" />
-                                <input type="radio" name="allornothing" id="all" />
+                            <form onChange={(e) => handleDamageType(e)}>
+                                <input type="radio" name="damageType" id="variable-dice" value="variable" defaultChecked/>
+                                <label htmlFor="variable-dice">Variable Damage Dice</label>
+                                <input type="radio" name="damageType" id="all" value="allornothing" />
+                                <label htmlFor="all">Single -all or nothing- Die</label>
                             </form>
                         </div>
                     </div>
@@ -50,6 +58,7 @@ const Attack = () => {
                 {showDTwelve && (
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                        <DTwelveContainer damageDice={damageType} />
                     </div>
                 )}
                 {showTwoDSix && (
