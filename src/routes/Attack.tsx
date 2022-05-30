@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DTwelveContainer from "../components/diceContainer/DTwelveContainer";
+import DSixContainer from "../components/diceContainer/TwoDSixContainer";
 
 const Attack = () => {
     const [showDiceTypes, setShowDiceTypes] = useState(true);
@@ -64,6 +65,7 @@ const Attack = () => {
                 {showTwoDSix && (
                     <div>
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                        <DSixContainer damageDice={damageType} />
                     </div>
                 )}
             </section>
