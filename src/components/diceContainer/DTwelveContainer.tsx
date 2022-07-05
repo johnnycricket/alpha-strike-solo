@@ -35,14 +35,15 @@ const DTwelveContainer = (props:D12Props) => {
             elementArray.push(<DieResult result={result} isD12={true}/>);
         }
 
-        setHasRolls(true);
         setRollElements(elementArray);
+        setHasRolls(true);
     }
 
     return (
         <div>
             <section>
                 <div>
+                    <h2>D12</h2>
                     {props.damageDice === "variable" && <form>
                         <input 
                             type="number" 
@@ -58,11 +59,11 @@ const DTwelveContainer = (props:D12Props) => {
                 </div>
             </section>
             <section>
-                 {hasRolls && 
+                {hasRolls && 
                     <div>
                         {rollElements}
-                    </div>}
-                    
+                    </div>
+                }    
             </section>
         </div>
     )

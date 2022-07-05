@@ -47,11 +47,28 @@ const Attack = () => {
                             <button onClick={() => updateStage('d6')}>2 D6</button>
                         </div>
                         <div>
-                            <form onChange={(e) => handleDamageType(e)}>
-                                <input type="radio" name="damageType" id="variable-dice" value="variable" defaultChecked/>
-                                <label htmlFor="variable-dice">Variable Damage Dice</label>
-                                <input type="radio" name="damageType" id="all" value="allornothing" />
-                                <label htmlFor="all">Single -all or nothing- Die</label>
+                            <form>
+                                <label htmlFor="variable-dice">
+                                    <input 
+                                        type="radio" 
+                                        name="damageType"
+                                        id="variable-dice"
+                                        value="variable"
+                                        onChange={e => handleDamageType(e)}
+                                        defaultChecked
+                                    />
+                                    Variable Damage Dice
+                                </label>
+                                <label htmlFor="all">
+                                    <input 
+                                        type="radio"
+                                        name="damageType"
+                                        id="all"
+                                        value="allornothing"
+                                        onChange={e => handleDamageType(e)}
+                                    />
+                                    Single -all or nothing- Die
+                                </label>
                             </form>
                         </div>
                     </div>

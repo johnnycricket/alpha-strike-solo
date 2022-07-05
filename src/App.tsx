@@ -4,7 +4,6 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import './App.css';
 import Dashboard from './routes/Dashboard';
 import Attack from './routes/Attack';
 import Firing from './routes/Firing';
