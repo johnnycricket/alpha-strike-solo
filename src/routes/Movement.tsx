@@ -52,18 +52,19 @@ const Movement = () => {
     }
 
     return (
-        <div>
-            <section>
+        <div className="movement">
+            <section className="header">
+                <sub>Alpha Strike Solo</sub>
                 <h1>Movement</h1>
             </section>
-            <section>
+            <section className="content">
                 {showMoveKinds && (
                     <div>
-                        <h2>What kind of unit is moving?</h2>
-                        <button onClick={() => updateStage('SM')}>Small - Medium Unit</button>
-                        <button onClick={() => updateStage('HA')}>Heavy - Assault Unit</button>
-                        <button onClick={() => updateStage('MS')}>Missile Boat - Sniper Unit</button>
-                        <button onClick={() => updateStage('Melee')}>Melee Unit</button>
+                        <p>What kind of unit is moving?</p>
+                        <button className="button" onClick={() => updateStage('SM')}>Small - Medium Unit</button>
+                        <button className="button" onClick={() => updateStage('HA')}>Heavy - Assault Unit</button>
+                        <button className="button" onClick={() => updateStage('MS')}>Missile Boat - Sniper Unit</button>
+                        <button className="button" onClick={() => updateStage('Melee')}>Melee Unit</button>
                     </div>
                 )}
 

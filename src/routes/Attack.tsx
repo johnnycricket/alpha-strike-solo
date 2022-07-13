@@ -32,13 +32,12 @@ const Attack = () => {
     }
     
     return (
-        <div>
-            <section>
-                <div>
-                    <h1>Attack</h1>
-                </div>
+        <div className="attack">
+            <section className="header">
+                <sub>Alpha Strike Solo</sub>
+                <h1>Attack</h1>
             </section>
-            <section>
+            <section className="content">
                 {showDiceTypes && (
                     <div>
                         <div>
