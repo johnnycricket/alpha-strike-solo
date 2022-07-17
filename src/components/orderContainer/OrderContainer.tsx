@@ -25,9 +25,9 @@ const OrderContainer = (props: CT) => {
     }
 
     return (
-        <div>
+        <div className='ordercontainer'>
             <h2>{props.orderTitle}</h2>
-            <button onClick={() => rollInstruction()}>Move</button>
+            <button className="button" onClick={() => rollInstruction()}>Move</button>
             <section>
                 {currOrder.instruction && 
                     <div>
@@ -35,7 +35,10 @@ const OrderContainer = (props: CT) => {
                         <p data-testid="instruction-p">{currOrder.instruction}</p>
                     </div>}
                 {currOrder.index > 0 && currOrder.shift !== 'o' &&
-                    <button data-testid="shift-button" onClick={() => shiftOrder()}>This order doesn't work. Try another.</button>}
+                   <span>
+                        <sub>If that doesn’t work, there’s an:</sub>
+                        <button data-testid="shift-button" className="button" onClick={() => shiftOrder()}>Alternate Option</button>
+                   </span>}
             </section>
         </div>
     )

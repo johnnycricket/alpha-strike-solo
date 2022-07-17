@@ -69,25 +69,25 @@ const Movement = () => {
                 )}
 
                 {showSM && 
-                    <div>
+                    <div className="overlay">
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
                         <OrderContainer orderType={LightMediumMovement} orderTitle={"Small & Medium Unit Movement"}/>
                     </div>
                 }
                 {showHA && 
-                    <div>
+                    <div className="overlay">
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
                         <OrderContainer orderType={HeavyAssaultMovementType} orderTitle={"Heavy & Assault Unit Movement"}/>
                     </div>
                 }
                 {showMS && 
-                    <div>
+                    <div className="overlay">
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
                         <OrderContainer orderType={MissileSniperMovementType} orderTitle={"Missile & Sniper Unit Movement"}/>
                     </div>
                 }
                 {showMelee && 
-                    <div>
+                    <div className="overlay">
                         <span className="closeIcon" onClick={() => updateStage()}>X</span>
                         <OrderContainer orderType={MeleeMovementType} orderTitle={'Melee Unit Movement'}/>
                     </div>}
