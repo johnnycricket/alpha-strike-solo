@@ -4,6 +4,7 @@ import { HeavyAssaultMovement as HeavyAssaultMovementType } from "../types/Heavy
 import { MissileSniperMovement as MissileSniperMovementType } from "../types/MissileSniperMovement";
 import { MeleeMovement as MeleeMovementType } from "../types/MeleeMovement";
 import OrderContainer from "../components/orderContainer/OrderContainer";
+import CloseIcon from "../components/closeicon";
 
 const Movement = () => {
     const [showMoveKinds, setShowMoveKinds] = useState(true);
@@ -70,25 +71,25 @@ const Movement = () => {
 
                 {showSM && 
                     <div className="overlay">
-                        <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                        <span className="closeIcon" onClick={() => updateStage()}><CloseIcon /></span>
                         <OrderContainer orderType={LightMediumMovement} orderTitle={"Small & Medium Unit Movement"}/>
                     </div>
                 }
                 {showHA && 
                     <div className="overlay">
-                        <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                        <span className="closeIcon" onClick={() => updateStage()}><CloseIcon /></span>
                         <OrderContainer orderType={HeavyAssaultMovementType} orderTitle={"Heavy & Assault Unit Movement"}/>
                     </div>
                 }
                 {showMS && 
                     <div className="overlay">
-                        <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                        <span className="closeIcon" onClick={() => updateStage()}><CloseIcon /></span>
                         <OrderContainer orderType={MissileSniperMovementType} orderTitle={"Missile & Sniper Unit Movement"}/>
                     </div>
                 }
                 {showMelee && 
                     <div className="overlay">
-                        <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                        <span className="closeIcon" onClick={() => updateStage()}><CloseIcon /></span>
                         <OrderContainer orderType={MeleeMovementType} orderTitle={'Melee Unit Movement'}/>
                     </div>}
             </section>
