@@ -2,10 +2,7 @@
     .content {
         display: flex;
         margin: 0 1rem;
-        p {
-            font-weight: 800;
-            font-style: italic;
-        }
+    
         .button {
             margin-right: 1rem;
         }
@@ -20,10 +17,6 @@
                 right: 1.5rem;
                 cursor: pointer;
                 padding-top: 0.5rem;
-            }
-
-            .ordercontainer {
-                padding: 1rem;
             }
         }
     }

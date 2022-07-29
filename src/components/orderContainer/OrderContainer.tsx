@@ -31,14 +31,13 @@ const OrderContainer = (props: CT) => {
             <section>
                 {currOrder.instruction && 
                     <div>
-                        <h3>Instruction</h3>
                         <p data-testid="instruction-p">{currOrder.instruction}</p>
                     </div>}
                 {currOrder.index > 0 && currOrder.shift !== 'o' &&
-                   <span>
+                   <div className="alternateoptions">
                         <sub>If that doesn’t work, there’s an:</sub>
                         <button data-testid="shift-button" className="button" onClick={() => shiftOrder()}>Alternate Option</button>
-                   </span>}
+                   </div>}
             </section>
         </div>
     )
