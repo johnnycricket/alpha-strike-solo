@@ -1,7 +1,7 @@
 const CloseIcon = () => {
     return (
         <>
-            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg data-testid="close-icon" width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_23_79)">
                     <circle cx="19.5" cy="17.5" r="17.5" fill="#FCFCFC" />
                     <circle cx="19.5" cy="17.5" r="17" stroke="#222222" />

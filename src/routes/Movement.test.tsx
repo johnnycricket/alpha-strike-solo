@@ -24,14 +24,14 @@ describe("all of movement", () => {
             })
             test('should show small medium when small medium button', () => {
                 fireEvent.click(smMdBtn);
-                const close = screen.getByText('X');
+                const close = screen.getByTestId('close-icon');
                 const smallMediumComponent = screen.getByText('Small & Medium Unit Movement');
                 expect(close).toBeTruthy();
                 expect(smallMediumComponent).toBeTruthy();
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(smMdBtn);
-                let close = screen.getByText('X');
+                let close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
@@ -46,14 +46,14 @@ describe("all of movement", () => {
             })
             test('should show heavy and assault when heavy and asssult unit button', () => {
                 fireEvent.click(hvBtn);
-                const close = screen.getByText('X');
+                const close = screen.getByTestId('close-icon');
                 const smallMediumComponent = screen.getByText('Heavy & Assault Unit Movement');
                 expect(close).toBeTruthy();
                 expect(smallMediumComponent).toBeTruthy();
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(hvBtn);
-                let close = screen.getByText('X');
+                let close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
@@ -68,14 +68,14 @@ describe("all of movement", () => {
             })
             test('should show missile sniper when that unit button pressed', () => {
                 fireEvent.click(msSn);
-                const close = screen.getByText('X');
+                const close = screen.getByTestId('close-icon');
                 const missileSniperComponent = screen.getByText('Missile & Sniper Unit Movement');
                 expect(close).toBeTruthy();
                 expect(missileSniperComponent).toBeTruthy();
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(msSn);
-                let close = screen.getByText('X');
+                let close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
@@ -90,14 +90,14 @@ describe("all of movement", () => {
             })
             test('should show melee unit button when pressed', () => {
                 fireEvent.click(melee);
-                const close = screen.getByText('X');
+                const close = screen.getByTestId('close-icon');
                 const meleeComponent = screen.getByText('Melee Unit Movement');
                 expect(close).toBeTruthy();
                 expect(meleeComponent).toBeTruthy();
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(melee);
-                let close = screen.getByText('X');
+                let close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
