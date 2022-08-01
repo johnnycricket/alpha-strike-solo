@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DTwelveContainer from "../components/diceContainer/DTwelveContainer";
 import DSixContainer from "../components/diceContainer/TwoDSixContainer";
 
@@ -37,6 +38,9 @@ const Attack = () => {
                 <sub>Alpha Strike Solo</sub>
                 <h1>Attack</h1>
             </section>
+            <nav>
+                <Link data-testid="return-link" to="/">&lt; Dashboard</Link>
+            </nav>
             <section className="content">
                 {showDiceTypes && (
                     <div>

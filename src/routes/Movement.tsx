@@ -5,6 +5,7 @@ import { MissileSniperMovement as MissileSniperMovementType } from "../types/Mis
 import { MeleeMovement as MeleeMovementType } from "../types/MeleeMovement";
 import OrderContainer from "../components/orderContainer/OrderContainer";
 import CloseIcon from "../components/closeicon";
+import { Link } from "react-router-dom";
 
 const Movement = () => {
     const [showMoveKinds, setShowMoveKinds] = useState(true);
@@ -58,6 +59,9 @@ const Movement = () => {
                 <sub>Alpha Strike Solo</sub>
                 <h1>Movement</h1>
             </section>
+            <nav>
+                <Link data-testid="return-link" to="/">&lt; Dashboard</Link>
+            </nav>
             <section className="content">
                 {showMoveKinds && (
                     <div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CloseIcon from "../components/closeicon";
 import OrderContainer from "../components/orderContainer/OrderContainer";
 import { FiringRules } from '../types/FiringRules';
@@ -33,6 +34,9 @@ const Firing = () => {
                 <sub>Alpha Strike Solo</sub>
                 <h1>Firing</h1>
             </section>
+            <nav>
+                <Link data-testid="return-link" to="/">&lt; Dashboard</Link>
+            </nav>
             <section className="content">
                 {showFiringKinds && (
                     <div>
