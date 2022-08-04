@@ -18,3 +18,15 @@
         padding-bottom: 0.5rem;
     }
 }
+
+nav {
+    .back-link {
+        font-weight: 800;
+        font-style: italic;
+        margin-left: 1em;
+        color: $black;
+    }
+    
+    border-bottom: 1px solid;
+    padding: 1em 0;
+}

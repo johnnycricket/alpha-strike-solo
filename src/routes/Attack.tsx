@@ -39,7 +39,7 @@ const Attack = () => {
                 <h1>Attack</h1>
             </section>
             <nav>
-                <Link data-testid="return-link" to="/">&lt; Dashboard</Link>
+                <Link className="back-link" data-testid="return-link" to="/">&lt; Dashboard</Link>
             </nav>
             <section className="content">
                 {showDiceTypes && (
