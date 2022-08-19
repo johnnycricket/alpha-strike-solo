@@ -6,9 +6,9 @@ describe("all of targeting", () => {
     describe('loading component', ()=> {
         test('should see page header', () => {
             render(
-            <MemoryRouter>
-                <Targeting/>
-            </MemoryRouter>
+                <MemoryRouter>
+                    <Targeting/>
+                </MemoryRouter>
             );
             const targetHeader = screen.getByText('Unit Targeting')
             expect(targetHeader).toBeTruthy();

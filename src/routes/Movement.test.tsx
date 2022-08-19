@@ -1,15 +1,24 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import Movement from "./Movement";
 
 describe("all of movement", () => {
     describe('loading component', () => {
         test('should see page header', () => {
-            render(<Movement/>);
+            render(
+                <MemoryRouter>
+                    <Movement/>
+                </MemoryRouter>
+            );
             const movementHeader = screen.getByText('What kind of unit is moving?');
             expect(movementHeader).toBeTruthy();
         })
         test('should have four buttons for asking what kind of movement', () => {
-            render(<Movement/>);
+            render(
+                <MemoryRouter>
+                    <Movement/>
+                </MemoryRouter>
+            );
             const movementButtons = screen.queryAllByRole('button');
             expect(movementButtons.length).toEqual(4);
         });
@@ -19,7 +28,11 @@ describe("all of movement", () => {
             let smMdBtn: any;
             beforeEach(() => {
                 // eslint-disable-next-line testing-library/no-render-in-setup
-                render(<Movement/>);
+                render(
+                    <MemoryRouter>
+                        <Movement/>
+                    </MemoryRouter>
+                );
                 smMdBtn = screen.getByText('Small - Medium Unit');
             })
             test('should show small medium when small medium button', () => {
@@ -41,7 +54,11 @@ describe("all of movement", () => {
             let hvBtn: any;
             beforeEach(() => {
                 // eslint-disable-next-line testing-library/no-render-in-setup
-                render(<Movement/>);
+                render(
+                    <MemoryRouter>
+                        <Movement/>
+                    </MemoryRouter>
+                );
                 hvBtn = screen.getByText('Heavy - Assault Unit');
             })
             test('should show heavy and assault when heavy and asssult unit button', () => {
@@ -63,7 +80,11 @@ describe("all of movement", () => {
             let msSn: any;
             beforeEach(() => {
                 // eslint-disable-next-line testing-library/no-render-in-setup
-                render(<Movement/>);
+                render(
+                    <MemoryRouter>
+                        <Movement/>
+                    </MemoryRouter>
+                );
                 msSn = screen.getByText('Missile Boat - Sniper Unit');
             })
             test('should show missile sniper when that unit button pressed', () => {
@@ -85,7 +106,11 @@ describe("all of movement", () => {
             let melee: any;
             beforeEach(() => {
                 // eslint-disable-next-line testing-library/no-render-in-setup
-                render(<Movement/>);
+                render(
+                    <MemoryRouter>
+                        <Movement/>
+                    </MemoryRouter>
+                );
                 melee = screen.getByText('Melee Unit');
             })
             test('should show melee unit button when pressed', () => {

@@ -13,7 +13,7 @@ describe('All of DSixContainer', () => {
         const rollButton = screen.getByRole('button');
         fireEvent.click(rollButton);
 
-        const actual = screen.getByTestId('dsix-svg');
+        const actual = screen.getByTestId('twodsix-svg');
         expect(actual).toBeTruthy();
     })
 
@@ -24,7 +24,7 @@ describe('All of DSixContainer', () => {
         fireEvent.input(numberOfDiceInput, {target: {value: '2'}});
         fireEvent.click(rollButton);
 
-        const actual = screen.getAllByTestId('dsix-svg');
+        const actual = screen.getAllByTestId('twodsix-svg');
         console.log(actual);
         expect(actual.length).toBe(2);
     })

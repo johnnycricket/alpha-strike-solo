@@ -1,15 +1,24 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import Firing from "./Firing";
 
 describe("all of targeting", () => {
     describe('loading component', ()=> {
         test('should see page header', () => {
-            render(<Firing/>);
+            render(
+                <MemoryRouter>
+                    <Firing/>
+                </MemoryRouter>
+            );
             const targetHeader = screen.getByText('Firing');
             expect(targetHeader).toBeTruthy();
         })
         test('should have two buttons for asking what kind of firing/strike is happening', () => {
-            render(<Firing/>);
+            render(
+                <MemoryRouter>
+                    <Firing/>
+                </MemoryRouter>
+            );
             const firingButtons = screen.queryAllByRole('button');
             expect(firingButtons.length).toEqual(2);
         })
@@ -20,7 +29,11 @@ describe("all of targeting", () => {
             let fBtn: any;
             beforeEach(() => {
                 // eslint-disable-next-line testing-library/no-render-in-setup
-                render(<Firing/>);
+                render(
+                    <MemoryRouter>
+                        <Firing/>
+                    </MemoryRouter>
+                );
                 fBtn = screen.getByText('Ranged Attack');
             });
             test('should show ranged firing', () => {
@@ -42,7 +55,11 @@ describe("all of targeting", () => {
             let mBtn: any;
             beforeEach(() => {
                 // eslint-disable-next-line testing-library/no-render-in-setup
-                render(<Firing/>);
+                render(
+                    <MemoryRouter>
+                        <Firing/>
+                    </MemoryRouter>
+                );
                 mBtn = screen.getByText('Melee Attack');
             });
             test('should show melee firing', () => {

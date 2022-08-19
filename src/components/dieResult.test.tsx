@@ -23,9 +23,9 @@ describe('all of die result', () => {
             expect(actual.innerHTML).toStrictEqual("4")
         });
 
-        test('should display a d12 svg', () => {
+        test('should display a d6 svg', () => {
             render(<DieResult result={4} isD12={false} />);
-            let actual = screen.getByTestId('dsix-svg');
+            let actual = screen.getByTestId('twodsix-svg');
             expect(actual).toBeTruthy();
         })
     });

@@ -1,3 +1,6 @@
+import DTwelve from "./dice/DTwelve";
+import TwoDSix from "./dice/TwoDSix";
+
 interface ResultProps {
     result: Number,
     isD12?: boolean
@@ -11,6 +14,12 @@ const defaultProps: ResultProps = {
 const DieResult = (props: ResultProps) => {
     return (
         <div>
+            {props.isD12 && 
+                <DTwelve/>
+            }
+            {!props.isD12 && 
+                <TwoDSix/>
+            }
             <span className="result-text">{props.result}</span>
         </div>
     )
