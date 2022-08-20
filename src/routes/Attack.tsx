@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import CloseIcon from "../components/closeicon";
 import DTwelveContainer from "../components/diceContainer/DTwelveContainer";
 import DSixContainer from "../components/diceContainer/TwoDSixContainer";
 
@@ -45,9 +46,9 @@ const Attack = () => {
                 {showDiceTypes && (
                     <div>
                         <div>
-                            <h2>Choose Dice Type</h2>
-                            <button onClick={() => updateStage('d12')}>D12</button>
-                            <button onClick={() => updateStage('d6')}>2 D6</button>
+                            <p>Choose Dice Type</p>
+                            <button className="button" onClick={() => updateStage('d12')}>D12</button>
+                            <button className="button" onClick={() => updateStage('d6')}>2 D6</button>
                         </div>
                         <div>
                             <form>
@@ -77,14 +78,14 @@ const Attack = () => {
                     </div>
                 )}
                 {showDTwelve && (
-                    <div>
-                        <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                    <div className="overlay">
+                        <span className="closeIcon" onClick={() => updateStage()}><CloseIcon/></span>
                         <DTwelveContainer damageDice={damageType} />
                     </div>
                 )}
                 {showTwoDSix && (
-                    <div>
-                        <span className="closeIcon" onClick={() => updateStage()}>X</span>
+                    <div className="overlay">
+                        <span className="closeIcon" onClick={() => updateStage()}><CloseIcon/></span>
                         <DSixContainer damageDice={damageType} />
                     </div>
                 )}

@@ -1,4 +1,4 @@
-.movement {
+.attack {
     .content {
         display: flex;
         margin: 0 1rem;
@@ -6,6 +6,15 @@
         .button {
             margin-right: 1rem;
             padding: 0.5rem 1rem;
+        }
+
+        form {
+            padding-top: 2rem;
+        }
+
+        label {
+            display: block;
+            padding: 0.5rem 0;
         }
 
         .overlay {

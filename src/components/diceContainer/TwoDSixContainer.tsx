@@ -42,12 +42,14 @@ const DSixContainer = (props:D6Props) => {
     }
 
     return (
-        <div>
+        <div className="twoDSixContainer">
             <section>
                 <div>
                     <h2>2 D6</h2>
                     {props.damageDice === "variable" && <form>
+                        <label htmlFor="numberofdice">Number of Dice</label>
                         <input 
+                            className="button"
                             type="number" 
                             name="numberofdice" 
                             id="numberofdice" 
@@ -55,9 +57,9 @@ const DSixContainer = (props:D6Props) => {
                             value={diceNumber} 
                             onChange={e => updateNumberOfDice(e)}
                             />
-                        <label htmlFor="numberofdice">Number of Dice</label>
+                        
                     </form>}
-                    <button onClick={() => getRolls()}>Roll</button>
+                    <button className="button" onClick={() => getRolls()}>Roll</button>
                 </div>
             </section>
             <section>
