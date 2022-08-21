@@ -64,7 +64,7 @@ const DSixContainer = (props:D6Props) => {
             </section>
             <section>
                 {hasRolls && 
-                    <div>
+                    <div className="die-results">
                         {rollElements}
                     </div>
                 }    

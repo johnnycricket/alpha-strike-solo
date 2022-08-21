@@ -40,12 +40,13 @@ const DTwelveContainer = (props:D12Props) => {
     }
 
     return (
-        <div>
+        <div className="dTwelveContainer">
             <section>
                 <div>
                     <h2>D12</h2>
                     {props.damageDice === "variable" && <form>
-                        <input 
+                        <input
+                            className="button" 
                             type="number" 
                             name="numberofdice" 
                             id="numberofdice" 
@@ -55,12 +56,12 @@ const DTwelveContainer = (props:D12Props) => {
                             />
                         <label htmlFor="numberofdice">Number of Dice</label>
                     </form>}
-                    <button onClick={() => getRolls()}>Roll</button>
+                    <button className="button" onClick={() => getRolls()}>Roll</button>
                 </div>
             </section>
             <section>
                 {hasRolls && 
-                    <div>
+                    <div className="die-results">
                         {rollElements}
                     </div>
                 }    

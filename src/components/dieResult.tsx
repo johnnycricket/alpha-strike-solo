@@ -13,7 +13,7 @@ const defaultProps: ResultProps = {
 
 const DieResult = (props: ResultProps) => {
     return (
-        <div>
+        <div className="die-result">
             {props.isD12 && 
                 <DTwelve/>
             }
