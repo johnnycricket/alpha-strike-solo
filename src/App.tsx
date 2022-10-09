@@ -3,11 +3,11 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Dashboard from './routes/Dashboard';
 import Attack from './routes/Attack';
 import Firing from './routes/Firing';
 import Movement from './routes/Movement';
 import Targeting from './routes/Targeting';
+import Dashboard from './routes/Dashboard';
 
 function App() {
   return (
