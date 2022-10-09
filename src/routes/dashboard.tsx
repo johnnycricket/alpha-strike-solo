@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
@@ -29,11 +29,6 @@ const Dashboard = () => {
                     </Link>
                 </div>
             </section>
-            {/* <section>
-                <Link to='/deployment'>
-                    <h1>Deployment</h1>
-                </Link>
-            </section> */}
         </div>
     )
 }
