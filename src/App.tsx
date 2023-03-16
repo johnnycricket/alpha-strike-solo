@@ -8,6 +8,7 @@ import Firing from './routes/Firing';
 import Movement from './routes/Movement';
 import Targeting from './routes/Targeting';
 import Dashboard from './routes/Dash';
+import { About } from './routes/About';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/movement" element={<Movement/>}/>
         <Route path="/targeting" element={<Targeting/>}/>
         <Route path="/firing" element={<Firing/>}/>
+        <Route path="/about" element={<About/>}/>
       </Routes>
     </div>
   );
