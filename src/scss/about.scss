@@ -1,0 +1,17 @@
+.about {
+    .content {
+        margin: 0 1rem;
+
+        h2, p, ul, li {
+            max-width: 90%;
+        }
+
+        h2 {
+            border-top: 0.01em solid $black;
+        }
+
+        li {
+            line-height: 2rem;
+        }
+    }
+}
