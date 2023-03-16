@@ -32,7 +32,7 @@ const DTwelveContainer = (props:D12Props) => {
             }
         } else {
             result = DTwelve();
-            elementArray.push(<DieResult result={result} isD12={true}/>);
+            elementArray.push(<DieResult result={result} isD12={true} key={0}/>);
         }
 
         setRollElements(elementArray);

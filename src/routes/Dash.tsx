@@ -28,6 +28,11 @@ const Dashboard = () => {
                         <h1>Attack</h1>
                     </Link>
                 </div>
+                <div className="route">
+                    <Link to='/about'>
+                        <h1>About</h1>
+                    </Link>
+                </div>
             </section>
         </div>
     )

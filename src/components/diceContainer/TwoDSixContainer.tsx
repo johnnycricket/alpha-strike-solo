@@ -34,7 +34,7 @@ const DSixContainer = (props:D6Props) => {
         } else {
             const tup = TwoDSix()
             result = tup[0] + tup[1];
-            elementArray.push(<DieResult result={result} isD12={false}/>);
+            elementArray.push(<DieResult result={result} isD12={false} key={0}/>);
         }
 
         setRollElements(elementArray);
