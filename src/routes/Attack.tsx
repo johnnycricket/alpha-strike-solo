@@ -10,7 +10,7 @@ const Attack = () => {
     const [showTwoDSix, setShowTwoDSix] = useState(false);
     const [damageType, setDamageType] = useState('variable');
 
-    const updateStage = (type?: String): void => {
+    const updateStage = (type?: string): void => {
         switch (type) {
             case 'd12': 
                 setShowDiceTypes(false);

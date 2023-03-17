@@ -1,0 +1,16 @@
+name: test-and-verify
+run-name: ${{ github.actor }} is running test and verify
+on: [push, pull_request]
+jobs:
+  run-linting-and-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-repo
+        uses: actions/checkout@v3
+      - name: npm install
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - name: verifying
+        run: npm run verify

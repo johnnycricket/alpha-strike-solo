@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { LightMediumMovement } from "../types/LightMediumMovment";
 import { HeavyAssaultMovement as HeavyAssaultMovementType } from "../types/HeavyAssaultMovement";
 import { MissileSniperMovement as MissileSniperMovementType } from "../types/MissileSniperMovement";
@@ -14,7 +14,7 @@ const Movement = () => {
     const [showMS, setShowMS] = useState(false);
     const [showMelee, setShowMelee] = useState(false);
 
-    const updateStage = (type?: String): void => {
+    const updateStage = (type?: string): void => {
         switch (type) {
             case 'SM': 
                 setShowMoveKinds(false);
