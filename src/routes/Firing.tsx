@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CloseIcon from "../components/closeicon";
 import OrderContainer from "../components/orderContainer/OrderContainer";
@@ -10,7 +10,7 @@ const Firing = () => {
     const [showF, setShowF] = useState(false);
     const [showM, setShowM] = useState(false);
     
-    const updateStage = (type?: String): void => {
+    const updateStage = (type?: string): void => {
         switch (type) {
             case 'F':
                 setShowFiringKinds(false);

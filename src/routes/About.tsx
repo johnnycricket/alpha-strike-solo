@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom"
 
 export const About = () => {
@@ -11,7 +12,7 @@ export const About = () => {
                 <Link className="back-link" data-testid="return-link" to="/">&lt; Dashboard</Link>
             </nav>
             <section className="content">
-                <p>The Solo Alpha Strike free webapp is meant to help act as a dice driven AI to streamline solo play for Battletech's Alpha Strike. Depending on what you want need to do, you can roll targeting, movement, firing for your opponents in solo games.</p>
+                <p>The Solo Alpha Strike free webapp is meant to help act as a dice driven AI to streamline solo play for Battletech&#39;s Alpha Strike. Depending on what you want need to do, you can roll targeting, movement, firing for your opponents in solo games.</p>
 
                 <h2>1.1</h2>
                 <sub>03/16/2023</sub>

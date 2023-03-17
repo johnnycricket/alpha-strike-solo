@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { DTwelve } from "../../services/DiceService";
 import OrderService from "../../services/OrderService";
 import { TableInterface } from "../../types/TableInterface";
 
 interface CT {
     orderType: TableInterface[];
-    orderTitle: String;
+    orderTitle: string;
 }
 
 const OrderContainer = (props: CT) => {

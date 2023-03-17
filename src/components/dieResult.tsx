@@ -1,3 +1,4 @@
+import React from 'react';
 import DTwelve from "./dice/DTwelve";
 import TwoDSix from "./dice/TwoDSix";
 

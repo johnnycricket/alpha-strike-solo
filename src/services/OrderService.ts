@@ -2,7 +2,7 @@ import { TableInterface } from "../types/TableInterface"
 
 export default class OrderService {
     static checkRange(result: number, order: TableInterface):boolean {
-        let returned: boolean = false;
+        let returned = false;
         
         if(order.range) {
             order.range.map(value => {
@@ -33,7 +33,7 @@ export default class OrderService {
     }
 
     static shiftOrder(currentIndex: number, table: TableInterface[]): TableInterface {
-        let currOrder = table[currentIndex]
+        const currOrder = table[currentIndex]
         if(currOrder.shift === 'o'){
             return Object.assign({}, currOrder);
         }

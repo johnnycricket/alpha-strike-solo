@@ -1,13 +1,14 @@
+import React from 'react';
 import { useState } from "react";
 import { DTwelve } from "../../services/DiceService";
 import DieResult from "../dieResult";
 
 interface D12Props {
-    damageDice: String
+    damageDice: string
 }
 
 const DTwelveContainer = (props:D12Props) => {
-    const [hasRolls, setHasRolls] = useState<Boolean>(false);
+    const [hasRolls, setHasRolls] = useState<boolean>(false);
     const [diceNumber, setDiceNumber] = useState<number>(1);
     const [rollElements, setRollElements] = useState<JSX.Element[]>([]);
 
@@ -22,7 +23,7 @@ const DTwelveContainer = (props:D12Props) => {
     const getRolls = (): void => {
         setHasRolls(false);
         resetRollElements();
-        let result: number = 0;
+        let result = 0;
         const elementArray = [];
 
         if(props.damageDice === 'variable'){

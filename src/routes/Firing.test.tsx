@@ -1,3 +1,4 @@
+import React from 'react';
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Firing from "./Firing";
@@ -26,9 +27,8 @@ describe("all of targeting", () => {
 
     describe('show the different firings', () => {
         describe('F', () => {
-            let fBtn: any;
+            let fBtn: HTMLElement;
             beforeEach(() => {
-                // eslint-disable-next-line testing-library/no-render-in-setup
                 render(
                     <MemoryRouter>
                         <Firing/>
@@ -45,16 +45,15 @@ describe("all of targeting", () => {
             });
             test('clicking the close icon should show the default buttons again', () => {
                 fireEvent.click(fBtn);
-                let close = screen.getByTestId('close-icon');
+                const close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Attack');
                 expect(otherButton).toBeTruthy();
             })
         });
         describe('M', () => {
-            let mBtn: any;
+            let mBtn: HTMLElement;
             beforeEach(() => {
-                // eslint-disable-next-line testing-library/no-render-in-setup
                 render(
                     <MemoryRouter>
                         <Firing/>
@@ -71,7 +70,7 @@ describe("all of targeting", () => {
             });
             test('clicking the close icon should show the default buttons again', () => {
                 fireEvent.click(mBtn);
-                let close = screen.getByTestId('close-icon');
+                const close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Ranged Attack');
                 expect(otherButton).toBeTruthy();

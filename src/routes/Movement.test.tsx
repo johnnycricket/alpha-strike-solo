@@ -1,3 +1,4 @@
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Movement from "./Movement";
@@ -25,9 +26,8 @@ describe("all of movement", () => {
     })
     describe('showing the diff movements', () => {
         describe('SM', () => {
-            let smMdBtn: any;
+            let smMdBtn: HTMLElement;
             beforeEach(() => {
-                // eslint-disable-next-line testing-library/no-render-in-setup
                 render(
                     <MemoryRouter>
                         <Movement/>
@@ -44,16 +44,15 @@ describe("all of movement", () => {
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(smMdBtn);
-                let close = screen.getByTestId('close-icon');
+                const close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
             })
         })
         describe('HVAS', () => {
-            let hvBtn: any;
+            let hvBtn: HTMLElement;
             beforeEach(() => {
-                // eslint-disable-next-line testing-library/no-render-in-setup
                 render(
                     <MemoryRouter>
                         <Movement/>
@@ -70,16 +69,15 @@ describe("all of movement", () => {
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(hvBtn);
-                let close = screen.getByTestId('close-icon');
+                const close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
             })
         })
         describe('Missile Boat - Sniper Unit', () => {
-            let msSn: any;
+            let msSn: HTMLElement;
             beforeEach(() => {
-                // eslint-disable-next-line testing-library/no-render-in-setup
                 render(
                     <MemoryRouter>
                         <Movement/>
@@ -96,16 +94,15 @@ describe("all of movement", () => {
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(msSn);
-                let close = screen.getByTestId('close-icon');
+                const close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
             })
         })
         describe('Melee unit', () => {
-            let melee: any;
+            let melee: HTMLElement;
             beforeEach(() => {
-                // eslint-disable-next-line testing-library/no-render-in-setup
                 render(
                     <MemoryRouter>
                         <Movement/>
@@ -122,7 +119,7 @@ describe("all of movement", () => {
             });
             test('clicking X should show default questions again', () => {
                 fireEvent.click(melee);
-                let close = screen.getByTestId('close-icon');
+                const close = screen.getByTestId('close-icon');
                 fireEvent.click(close);
                 const otherButton = screen.getByText('Melee Unit');
                 expect(otherButton).toBeTruthy();
